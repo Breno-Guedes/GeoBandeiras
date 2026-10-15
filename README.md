@@ -46,6 +46,3 @@ lib/
 - As bandeiras não se repetem até que todas as disponíveis tenham aparecido.
 - Continentes: Américas do Norte, Central e do Sul formam "América". Turquia, Geórgia, Armênia, Azerbaijão e Cazaquistão estão na Ásia; Rússia e Chipre na Europa. Para mudar, edite `tools/gerar_paises.py` e rode-o de novo (ou edite o JSON direto).
 
-## Créditos
-
-- Bandeiras e códigos ISO: [world_countries](https://github.com/stefangabos/world_countries) (projeto base `flutter_flags_quiz`).
