@@ -1,4 +1,4 @@
-# Flag Game
+# GeoBandeiras
 
 Quiz de bandeiras feito em Flutter. Adivinhe o país de cada bandeira antes que o tempo acabe!
 
