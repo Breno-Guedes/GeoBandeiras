@@ -29,19 +29,14 @@ flutter test        # testes do gerador de perguntas, ranking e menu
 
 ```
 lib/
-  main.dart                      # inicialização e MaterialApp
-  estado/estado_app.dart         # estado global (idioma, tempo, dificuldade) + EscopoEstado
-  localizacao/textos.dart        # textos em pt / en / es
-  modelos/                       # Pais, ConfiguracaoPartida, Pergunta, ResultadoPartida, EntradaRanking
-  servicos/
-    repositorio_paises.dart      # lê o JSON de países
-    gerador_perguntas.dart       # sorteia bandeira + 3 alternativas erradas
-    armazenamento_ranking.dart   # ranking com shared_preferences
-  telas/                         # menu, continentes, configuracoes, jogo, resultados, ranking, bandeiras
-  widgets/                       # botao_menu, botao_resposta
-  utilitarios/texto_util.dart
-assets/dados/paises.json         # codigo, continente, dificuldade e nomes pt/en/es
-tools/gerar_paises.py            # script que gera o JSON (edite aqui para mudar nomes/continentes)
+├── estado/
+├── localizacao/
+├── modelos/
+├── servicos/
+├── telas/
+├── utilitarios/
+├── widgets/
+└── main.dart
 ```
 
 ## Regras do jogo
