@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -18,23 +20,50 @@ Future<void> main() async {
   runApp(JogoBandeirasApp(estado: estado));
 }
 
-class JogoBandeirasApp extends StatelessWidget {
+class JogoBandeirasApp extends StatefulWidget {
   final EstadoApp estado;
 
   const JogoBandeirasApp({super.key, required this.estado});
 
   @override
+  State<JogoBandeirasApp> createState() => _JogoBandeirasAppState();
+}
+
+class _JogoBandeirasAppState extends State<JogoBandeirasApp>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      unawaited(AudioGlobal().resumeMusic());
+    } else {
+      unawaited(AudioGlobal().pauseMusic());
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return EscopoEstado(
-      estado: estado,
+      estado: widget.estado,
       // Reconstrói o MaterialApp quando o idioma muda.
       child: AnimatedBuilder(
-        animation: estado,
+        animation: widget.estado,
         builder: (context, _) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'GeoBandeiras',
-            locale: Locale(estado.idioma),
+            locale: Locale(widget.estado.idioma),
             supportedLocales: const [
               Locale('pt'),
               Locale('en'),

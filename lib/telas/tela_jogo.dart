@@ -10,6 +10,7 @@ import '../modelos/pais.dart';
 import '../modelos/pergunta.dart';
 import '../modelos/resultado_partida.dart';
 import '../servicos/gerador_perguntas.dart';
+import '../servicos/audioGlobal.dart';
 import '../widgets/botao_resposta.dart';
 import 'tela_resultados.dart';
 import '../servicos/audio.dart';
@@ -65,6 +66,7 @@ class _TelaJogoState extends State<TelaJogo>
     // O gerador precisa do banco de países, que vem do estado global.
     if (_gerador == null) {
       final estado = EscopoEstado.de(context);
+      unawaited(AudioGlobal().setInGame(true));
       _gerador = GeradorPerguntas(
         todosPaises: estado.paises,
         configuracao: widget.configuracao,
@@ -84,6 +86,7 @@ class _TelaJogoState extends State<TelaJogo>
     _temporizadorProxima?.cancel();
     _temporizadorFim?.cancel();
     _animacao.dispose();
+    unawaited(AudioGlobal().setInGame(false));
     super.dispose();
   }
 
