@@ -1,4 +1,26 @@
-# Geo Bandeiras
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0e46482f-09fb-41bf-978c-ba436e3a3bc9" alt="Geo Bandeiras Logo" width="180">
+</p>
+
+<h1 align="center">GeoBandeiras</h1>
+
+<p align="center">
+  Jogo de quiz de bandeiras feito em Flutter.<br>
+  Programação para Dispositivos Móveis.
+</p>
+
+<p align="center">
+  <a href="https://flutter.dev">
+    <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter">
+  </a>
+  <a href="https://dart.dev">
+    <img src="https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+  </a>
+  <a href="https://www.android.com">
+    <img src="https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+  </a>
+</p>
+
 
 **Geo Bandeiras** é um jogo de perguntas e respostas desenvolvido em Flutter e Dart, no qual o jogador deve identificar países por meio de suas bandeiras. O projeto foi desenvolvido como atividade acadêmica da disciplina de Programação para Dispositivos Móveis (PDM).
 
